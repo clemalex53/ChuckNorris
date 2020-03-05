@@ -17,5 +17,8 @@ class MainActivity : AppCompatActivity() {
         //Manager of RecyclerView
         my_recycler_view.layoutManager = LinearLayoutManager(this)
 
+        val adapter = JokeAdapter()
+
+        my_recycler_view.adapter = adapter
     }
 }
