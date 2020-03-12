@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Display the list of jokes in the Logcat
-        Log.d("list", JokeList.jokes.toString())
+        Log.d("list", JokeList.jokesString.toString())
         //Manager of RecyclerView
         my_recycler_view.layoutManager = LinearLayoutManager(this)
 

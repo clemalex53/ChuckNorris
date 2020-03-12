@@ -1,7 +1,7 @@
 package com.example.chucknorris
 
 object JokeList{
-    val jokes:List<String> = listOf(
+    val jokesString:List<String> = listOf(
         "Chuck Norris can break one side of a window.",
         "Chuck Norris can smother a Velociraptor by clamping his anal sphincter around the raptor's nose.",
         "Chuck Norris is like a dog, not only because he can smell fear, but because he can piss on whatever he wants.",
