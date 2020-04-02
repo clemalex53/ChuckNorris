@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import io.reactivex.Single
+import io.reactivex.rxkotlin.subscribeBy
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,5 +23,16 @@ class MainActivity : AppCompatActivity() {
         val adapter = JokeAdapter()
 
         my_recycler_view.adapter = adapter
+
+        val singleJoke =
+            JokeApiServiceFactory
+                .createService()
+                .giveMeAJoke()
+                .subscribeOn(Schedulers.io())
+                .subscribeBy(
+                    onError = {Log.e("JOKE", "error found", it)},
+                    onSuccess = {Log.d("joke",it.toString())}
+                )
+        Log.d("joke",singleJoke.toString())
     }
 }
