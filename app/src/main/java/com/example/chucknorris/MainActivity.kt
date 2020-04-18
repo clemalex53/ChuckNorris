@@ -25,9 +25,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Display the list of jokes in the Logcat
-        Log.d("list", JokeList.jokesString.toString())
-        //Manager of RecyclerView
         my_recycler_view.layoutManager = LinearLayoutManager(this)
 
         val adapter = JokeAdapter()
@@ -43,16 +40,18 @@ class MainActivity : AppCompatActivity() {
                 JokeApiServiceFactory
                     .createService()
                     .giveMeAJoke()
-                    .delay(2,TimeUnit.SECONDS)
+                    .repeat(10)
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribeOn(Schedulers.io())
                     .subscribeBy(
+                        onNext = {
+                            adapter.listOfJokes = adapter.listOfJokes.plus(it)
+                        },
                         onError = {
                             Log.e("JOKE", "error found", it);
                             progressBar.visibility = View.INVISIBLE
                         },
-                        onSuccess = {
-                            adapter.listOfJokes = adapter.listOfJokes.plus(it);
+                        onComplete = {
                             progressBar.visibility = View.INVISIBLE
                         }
                     )
