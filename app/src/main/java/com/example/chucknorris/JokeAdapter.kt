@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class JokeAdapter : RecyclerView.Adapter<JokeAdapter.JokeViewHolder>() {
 
-    var listOfJokes: List<Joke> = JokeList.jokesString.toJoke()
+    var listOfJokes: List<Joke> = emptyList()
         set(newListOfJokes)
     {
         field = newListOfJokes
