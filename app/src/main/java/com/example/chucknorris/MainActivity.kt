@@ -25,12 +25,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
+
         setContentView(R.layout.activity_main)
 
         my_recycler_view.layoutManager = LinearLayoutManager(this)
         my_recycler_view.adapter = adapter
-
-        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
         fun newJokes(n:Long){
             progressBar.visibility = View.VISIBLE

@@ -17,7 +17,7 @@ The purpose of this application is to collect jokes about Chuck Norris on an API
 
 ## App development
 In the "commits" window you can see the progressive development of the application in several stages:
-I. A first version of the app which displays a pre-saved list
-II. Modification of the app to get jokes from Chuck Norris web API.
-III. Display jokes from web API and automatic loading when the bottom of the list is reached
-IV. Improvement of the user interface and add of some UI features.
+* I. A first version of the app which displays a pre-saved list
+* II. Modification of the app to get jokes from Chuck Norris web API.
+* III. Display jokes from web API and automatic loading when the bottom of the list is reached
+* IV. Improvement of the user interface and add of some UI features.
