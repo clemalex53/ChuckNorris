@@ -1,8 +1,6 @@
 package com.example.chucknorris
 
-import android.R.string
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
@@ -17,10 +15,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.builtins.list
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.parse
-import kotlinx.serialization.serializer
-import org.xmlpull.v1.XmlSerializer
-import java.lang.Exception
 
 
 class MainActivity : AppCompatActivity() {
