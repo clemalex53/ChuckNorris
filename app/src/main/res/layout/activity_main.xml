@@ -20,20 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/chuck_norris"
-        app:layout_constraintBottom_toTopOf="@id/load_button"
+        app:layout_constraintBottom_toTopOf="@id/progressBar"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        />
-
-    <Button
-        android:id="@+id/load_button"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="10dp"
-        android:text="@string/loadButton"
         />
 
     <ProgressBar
@@ -41,9 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/load_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
         android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
